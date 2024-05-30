@@ -4,7 +4,7 @@ import mediapipe as mp
 import numpy as np
 
 # Load the trained model and labels dictionary
-with open('./dataset_processed_all.p', 'rb') as f:
+with open('./dataset_processed_all_data.p', 'rb') as f:
     model_dict = pickle.load(f)
 model = model_dict['model']
 
@@ -27,7 +27,7 @@ padding_length = 84  # This should be set to the length used in the training dat
 
 # Label dictionary (update based on your model's training labels)
 # labels_dict = {i - 64: chr(i) for i in range(65, 91)}  # {'A': 1, 'B': 2, ..., 'Z': 26}
-labels_dict = {0 : 'A', 1 : 'B', 2 : 'C', 3 : 'D', 4 : 'E', 5 : 'F'}
+labels_dict = {0 : 'A', 1 : 'B', 2 : 'C', 3 : 'D', 4 : 'E', 5 : 'F', 6 : 'G', 7 : 'H', 8 : 'I', 9 : 'J', 10 : 'K', 11 : 'L', 12 : 'M', 13 : 'N', 14 : 'O', 15 : 'P', 16 : 'Q', 17 : 'R', 18 : 'S', 19 : 'T', 20 : 'U', 21 : 'V', 22 : 'W', 23 : 'X', 24 : 'Y', 25 : 'Z'}
 
 while True:
     data_aux = []

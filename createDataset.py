@@ -52,6 +52,6 @@ for dir in os.listdir(data_dir):
                     labels.append(dir)
 
 
-file = open('dataset_processed_5.pickle', 'wb')
+file = open('dataset_processed_all_data.pickle', 'wb')
 pickle.dump({'data': dataset, 'labels': labels}, file)
 file.close()

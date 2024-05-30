@@ -11,7 +11,7 @@ def pad_sequences(data, pad_value=0):
     return np.array(padded_data)
 
 # Load data from the pickle file
-data_dict = pickle.load(open('./data.pickle', 'rb'))
+data_dict = pickle.load(open('./dataset_processed_all_data.pickle', 'rb'))
 
 # Pad the sequences in data
 data = pad_sequences(data_dict['data'])
@@ -32,6 +32,6 @@ score = accuracy_score(y_predict, y_test)
 print('{}% of samples were classified correctly!'.format(score * 100))
 
 # Save the trained model to a file
-with open('dataset_processed_5.p', 'wb') as f:
+with open('dataset_processed_all_data.p', 'wb') as f:
     pickle.dump({'model': model}, f)
     
