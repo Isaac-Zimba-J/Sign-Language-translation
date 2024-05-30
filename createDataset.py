@@ -10,7 +10,7 @@ mp_drawing_styles = mp.solutions.drawing_styles
 
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
-data_dir = './project/trainset'
+data_dir = './trainset'
 dataset = []
 labels = []
 
@@ -52,6 +52,6 @@ for dir in os.listdir(data_dir):
                     labels.append(dir)
 
 
-file = open('data.pickle', 'wb')
+file = open('dataset_processed_all_data.pickle', 'wb')
 pickle.dump({'data': dataset, 'labels': labels}, file)
 file.close()
