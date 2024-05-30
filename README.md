@@ -1,10 +1,10 @@
-Sign Language Translation Model
+# Sign Language Translation Model
 
 Overview
 
 This project aims to create a sign language translation model using MediaPipe for hand landmark detection and Random Forest for training. The model translates sign language gestures representing letters from A to Z into corresponding text.
 
-Features
+# Features
 
 Hand Landmark Detection: Utilizes MediaPipe for accurately detecting hand landmarks in images.
 Random Forest Classifier: Trains a Random Forest classifier using the positions of hand landmarks extracted from sign language images.
